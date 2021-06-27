@@ -5,8 +5,10 @@ complete <- function(directory, id = 1:332){
   completedata <- lapply(completedatafiles, function(x) sum(unlist(x)))
   completedata
   completedatatable <- data.frame(completedata)
-  completedatatable <- t(completedatatable)
+  completedatatable <- as.data.frame(t(completedatatable))
   row.names(completedatatable) <- id
   colnames(completedatatable) <- "nobs"
+  completedatatable$id <- id
+  completedatatable <- completedatatable[c("id", "nobs")]
   completedatatable
 }
