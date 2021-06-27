@@ -12,3 +12,6 @@ complete <- function(directory, id = 1:332){
   completedatatable <- completedatatable[c("id", "nobs")]
   completedatatable
 }
+
+#t() transposes tabular data (reverses rows and columns), but forces product 
+#into matrix.  If you want data frame, must force it with as.data.frame()
