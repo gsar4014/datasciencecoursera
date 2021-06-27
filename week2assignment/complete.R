@@ -15,3 +15,6 @@ complete <- function(directory, id = 1:332){
 
 #t() transposes tabular data (reverses rows and columns), but forces product 
 #into matrix.  If you want data frame, must force it with as.data.frame()
+
+#The code on line 12 simply sets the order of columns in the data frame based on
+#name.
