@@ -7,9 +7,8 @@ corr <- function(directory, threshold = 0){
     read.csv(x))
   threshold_data_frames <- lapply(thresholddatasensors, function(x)
     data.frame(x))
-  correlations_vector <- lapply(threshold_data_frames, function(x)
+  correlations_vector <- sapply(threshold_data_frames, function(x)
     cor(x$nitrate, y = x$sulfate, use = "complete.obs"))
-  correlations_vector <- unlist(correlations_vector)
   correlations_vector
   
 }
